@@ -1,6 +1,7 @@
 #%%
 import pandas as pd
 
+print('Hello, Wolrd!')
 # reads data from excel and creates dataframe
 file_path = "C:\\Users\\asusr\\Documents\\Python\\Performance Screen\\data\\"
 file_name = "fund_bm_pricing.xlsx"
@@ -52,7 +53,7 @@ fbm_monthly['bm_rtn'] = fbm_monthly['FN-Bm'].pct_change()
 fbm_monthly['tracking_error'] = fbm_monthly['fund_rtn'] - fbm_monthly['bm_rtn']
 
 fund_tracking_error_M = fbm_monthly['tracking_error'].std()
-fund_tracking_error_9M = fund_tracking_error_M * pd.s
+fund_tracking_error_9M = fund_tracking_error_M
 print(f'Monthly tracking error is {fund_tracking_error_M:.2%}')
 
 # %%
